@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111e">
+  <meta name="description" content="Матч-центр ПОЛЕ: актуальное расписание ближайших спортивных событий.">
+  <title>Матч-центр — ПОЛЕ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="design-upgrade.css"><link rel="stylesheet" href="pages.css"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="site.js" defer></script><script src="pages.js" defer></script>
+</head>
+<body class="subpage match-page">
+  <div class="grain" aria-hidden="true"></div><div class="ambient ambient-one" aria-hidden="true"></div><div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="topbar topbar--site wrap"><a class="brand" href="index.html" aria-label="ПОЛЕ — на главную"><span class="brand-mark">П.</span><span>ПОЛЕ<span class="brand-sub">СПОРТИВНЫЙ ГИД</span></span></a><nav class="site-nav" id="site-nav" aria-label="Основная навигация"><a class="site-nav__link" href="index.html">Главная</a><a class="site-nav__link site-nav__link--active" href="match-center.html">Матч-центр</a><a class="site-nav__link" href="offers.html">Витрина</a><a class="site-nav__link" href="guide.html">Гид</a></nav><div class="header-actions"><div class="top-note"><span class="live-dot"></span> АФИША ОБНОВЛЯЕТСЯ</div><button class="menu-toggle" type="button" data-nav-toggle aria-controls="site-nav" aria-expanded="false" aria-label="Открыть меню"><span></span><span></span></button></div></header>
+
+  <main>
+    <section class="match-hero wrap"><div class="match-hero__copy"><div class="eyebrow"><span>01 / 04</span> АКТУАЛЬНЫЙ МАТЧ-ЦЕНТР</div><h1>Лови<br>ритм<br><em>игр.</em></h1><p>Расписание ближайших матчей загружается из открытого спортивного источника и обновляется автоматически, включая российские турниры. Время указано для Самары; это не трансляции, коэффициенты или прогнозы.</p></div><div class="scoreboard" aria-live="polite" aria-label="Ближайший матч из афиши"><span class="scoreboard__label" id="scoreboard-label">SCHEDULE / ЗАГРУЗКА</span><div class="scoreboard__time"><span id="scoreboard-hour">--</span><span>:</span><span id="scoreboard-minute">--</span></div><div class="scoreboard__teams"><b id="scoreboard-home">Загрузка</b><i id="scoreboard-divider">—</i><b id="scoreboard-away">афиши</b></div><div class="scoreboard__foot"><span id="scoreboard-sport">РАСПИСАНИЕ</span><span id="scoreboard-day">САМАРА</span></div><div class="scoreboard__beam beam-one"></div><div class="scoreboard__beam beam-two"></div></div></section>
+
+    <section class="match-stream wrap" aria-labelledby="schedule-title"><div class="match-stream__head"><div><div class="section-tag"><span>АФИША / АКТУАЛЬНО</span> ВЫБЕРИ ВИД СПОРТА</div><h2 id="schedule-title">Твой<br><em>плейлист игр.</em></h2></div><div class="match-filters" role="group" aria-label="Фильтр афиши"><button class="is-active" type="button" data-match-filter="all" aria-pressed="true">Все</button><button type="button" data-match-filter="russia" aria-pressed="false">Россия</button><button type="button" data-match-filter="football" aria-pressed="false">Футбол</button><button type="button" data-match-filter="hockey" aria-pressed="false">Хоккей</button><button type="button" data-match-filter="tennis" aria-pressed="false">Теннис</button><button type="button" data-match-filter="esports" aria-pressed="false">Киберспорт</button></div></div><div class="match-stream__toolbar"><p class="filter-status" id="match-status" role="status" aria-live="polite">ЗАГРУЖАЕМ АКТУАЛЬНУЮ АФИШУ</p><button class="match-refresh" id="match-refresh" type="button">Обновить</button></div><p class="match-meta"><span id="match-source-state">Получаем данные расписания.</span><span>Источник: <a href="https://www.thesportsdb.com/" target="_blank" rel="noopener noreferrer">TheSportsDB</a> · РПЛ, Кубок России, КХЛ и ВХЛ · время — Самара (UTC+4).</span></p>
+      <div class="match-list" id="match-list" aria-live="polite" aria-busy="true"><p class="match-state">Загружаем ближайшие события…</p></div>
+    </section>
+
+    <section class="match-note wrap"><div class="match-note__symbol">✳</div><div><div class="section-tag"><span>НЕБОЛЬШАЯ ПАУЗА</span> ИГРАЙ ОТВЕТСТВЕННО</div><h2>Любой матч<br><em>можно просто смотреть.</em></h2></div><p>Афиша помогает не пропускать интересное. Она не является советом для ставок и не показывает коэффициенты, трансляции или live-счёт.</p><a class="button button-lime" href="guide.html">Открыть гид <span>↗</span></a></section>
+  </main>
+
+  <footer class="footer footer--site wrap"><a class="brand" href="index.html"><span class="brand-mark">П.</span><span>ПОЛЕ<span class="brand-sub">СПОРТИВНЫЙ ГИД</span></span></a><nav class="footer-pages" aria-label="Навигация в подвале"><a href="match-center.html">Матч-центр</a><a href="offers.html">Витрина</a><a href="guide.html">Гид</a></nav><span class="footer-center">ИНФОРМАЦИОННЫЙ ПРОЕКТ · 18+</span><p class="footer-disclaimer">Расписание предоставляется TheSportsDB и может меняться или быть неполным. Материалы сайта носят информационный характер. 18+. Участие в азартных играх связано с риском.</p></footer>
+  <dialog class="age-dialog" id="age-dialog" aria-labelledby="age-title"><div class="age-mark">18<span>+</span></div><div class="eyebrow">ПРЕЖДЕ ЧЕМ ПРОДОЛЖИТЬ</div><h2 id="age-title">Тебе уже<br><em>исполнилось 18?</em></h2><p>На сайте могут упоминаться предложения, связанные со ставками. Продолжая, ты подтверждаешь, что достиг(ла) совершеннолетия в своей стране.</p><div class="age-actions"><button class="button button-lime" data-age-yes>Да, мне есть 18</button><button class="text-button" data-age-no>Нет, мне нет 18</button></div><p class="age-note">18+ · ИГРАЙ ОТВЕТСТВЕННО</p></dialog>
+  <div class="toast" id="age-toast" role="status">Этот сайт предназначен только для совершеннолетних.</div><div class="toast page-toast" id="page-toast" role="status"></div>
+</body>
+</html>
